@@ -30,7 +30,8 @@
   },
   "homepage": "https://github.com/dothiv/ribbon#readme",
   "dependencies": {
-    "jquery": "^3.1.1"
+    "jquery": "^3.1.1",
+    "podio-js": "^1.5.0"
   },
   "devDependencies": {
     "aliasify": "^2.0.0",
