@@ -1,0 +1,48 @@
+{
+  "en": {
+    "heading": "This website wears a digital Red Ribbon.",
+    "info": "It fights for the end of AIDS.",
+    "more": "More about .hiv &raquo;",
+    "microsite": {
+      "headline": "<%= title %> digital Red Ribbon",
+      "text": "I support the global, digital movement to see the end of AIDS. Together we can do it! Let\u2019s build an AIDS free generation.",
+      "learnMore": "Learn more",
+      "getYourOwn": "Get your own",
+      "tellYourFriends": "Tell your friends:",
+      "imprint": "Imprint",
+      "tweet": "Lets work together to see an #AIDS free generation @dotHIV \u2013 <%= domain %>",
+      "tweetUrl": "https://twitter.com/intent/tweet?text=Lets+work+together+to+see+an+%23AIDS+free+generation+%40dotHIV+%E2%80%93+<%= domain %>"
+    }
+  },
+  "de": {
+    "heading": "Diese Internetseite trägt die digitale Rote Schleife.",
+    "info": "Sie unterstützt das Ende von AIDS.",
+    "more": "Mehr zu .hiv &raquo;",
+    "microsite": {
+      "headline": "<%= title %> digitale Rote Schleife",
+      "text": "Mit dieser Internetadresse setze ich ein digitales Zeichen f\u00fcr das Ende von Aids. Unsere Generation kann es schaffen!",
+      "learnMore": "Mehr \u00fcber .hiv",
+      "getYourOwn": "Mach mit",
+      "tellYourFriends": "Jetzt weitersagen:",
+      "imprint": "Impressum"
+    }
+  },
+  "es": {
+    "microsite": {
+      "headline": "El lazo rojo digital de <%= title %>",
+      "text": "Con esta direcci\u00f3n electr\u00f3nica formo parte de un movimiento digital para acabar con el flagelo del SIDA. \u00a1Juntos podemos lograrlo!",
+      "learnMore": "M\u00e1s informaci\u00f3n",
+      "getYourOwn": "Participa",
+      "tellYourFriends": "Corre la voz:"
+    }
+  },
+  "fr": {
+    "microsite": {
+      "headline": "Ruban rouge en ligne de <%= title %>",
+      "text": "Avec cette adresse web je prends part \u00e0 un mouvement num\u00e9rique pour la fin du SIDA. Pour une g\u00e9n\u00e9ration sans SIDA! Ensemble nous y arriverons.",
+      "learnMore": "Plus d'information sur .hiv",
+      "getYourOwn": "Participe, toi aussi!",
+      "tellYourFriends": "Passez le mot:"
+    }
+  }
+}

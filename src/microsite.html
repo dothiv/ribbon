@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+
+            _|_|          _|_|
+            _|_|          _|_|
+            _|_|
+            _|_|
+            _|_|_|_|      _|_|  _|_|    _|_|
+            _|_|_|_|_|    _|_|  _|_|    _|_|
+            _|_|    _|_|  _|_|  _|_|    _|_|
+            _|_|    _|_|  _|_|  _|_|    _|_|
+            _|_|    _|_|  _|_|  _|_|    _|_|
+      _|_|  _|_|    _|_|  _|_|    _|_|_|_|
+      _|_|  _|_|    _|_|  _|_|      _|_|
+
+      .hiv domains – The digital Red Ribbon
+                  click4life.hiv
+
+-->
+<html lang="<%= data['language'] %>">
+<head>
+  <title><%= data['title'] %> digital Red Ribbon</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="/img/favicon.png?v=<%= data.version %>-<%= data.buildTime %>">
+  <link rel="stylesheet" href="/css/microsite.min.css?v=<%= data.version %>-<%= data.buildTime %>">
+  <!-- Twitter cards support -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="dotHIV">
+  <meta name="twitter:title" content="<%= data['title'] %> digital Red Ribbon">
+  <meta name="twitter:description" content="I support the global, digital movement to see the end of AIDS. Together we can do it! Let’s build an AIDS free generation.">
+  <meta name="twitter:creator" content="dotHIV">
+  <meta name="twitter:image:src" content="http://<%= data['domain'] %>/img/header-960px.jpg?v=<%= data.version %>-<%= data['buildTime'] %>">
+  <!-- Facebook open graph support -->
+  <meta property="og:title" content="<%= data['title'] %> digital Red Ribbon">
+  <meta property="og:description" content="I support the global, digital movement to see the end of AIDS. Together we can do it! Let’s build an AIDS free generation.">
+  <meta property="og:site_name" content="<%= data['title'] %> digital Red Ribbon">
+  <meta property="og:image" content="http://<%= data['domain'] %>/img/header-960px.jpg?v=<%= data.version %>-<%= data['buildTime'] %>">
+  <meta property="og:type" content="website">
+  <meta property="fb:app_id" content="486753724803417">
+</head>
+<body>
+<main class="container">
+  <header class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <img src="/img/header-960px.jpg?v=<%= data.version %>-<%= data['buildTime'] %>" alt="<%= data['title'] %> digital Red Ribbon" width="960" class="ribbon">
+    </div>
+  </header>
+  <article class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <h1><%= data.microsite.headline %></h1>
+      <p><%= data.microsite.text %></p>
+      <p>
+      </p>
+      <nav>
+        <a href="https://click4life.hiv/" rel="friend" class="pull-left button"><%= data.microsite.learnMore %></a>
+        <a href="http://uniregistry.link/extensions/hiv/" rel="friend" class="pull-right button"><%= data.microsite.getYourOwn %></a>
+      </nav>
+    </div>
+  </article>
+  <aside class="row tellyourfriends">
+    <h2 class="col-xs-12 col-sm-8 col-sm-offset-2"><%= data.microsite.tellYourFriends %></h2>
+    <div class="col-xs-10 col-sm-7 col-sm-offset-2">
+      <p class="tweet"><%= data.microsite.tweet %></p>
+    </div>
+    <div class="col-xs-2 col-sm-1 text-left">
+      <a href="<%= data.microsite.tweetUrl %>" class="tweet">
+        <i class="ion-logo-twitter"></i> </a>
+    </div>
+  </aside>
+  <footer>
+    <div>
+      <a href="https://click4life.hiv/" rel="friend">
+        <img src="/img/logo.svg?v=<%= data.version %>-<%= data.buildTime %>" alt="dotHIV – The digital Red Ribbon" class="logo">
+      </a>
+    </div>
+    <div class="imprint">
+      <a href="http://dothiv.jimdo.com/about/"><%= data.microsite.imprint %></a>
+    </div>
+  </footer>
+</main>
+<%= includes['clickcounter'] %>
+<script type="text/javascript" src="/js/microsite.min.js?v=<%= data.version %>-<%= data.buildTime %>"></script>
+</body>
+</html>

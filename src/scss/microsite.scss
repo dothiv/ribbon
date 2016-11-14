@@ -1,0 +1,82 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap";
+@import "../../node_modules/ionicons/dist/css/ionicons";
+@import "./clickcounter";
+
+main {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 20px;
+
+  img {
+    width: 100%;
+  }
+
+  h1 {
+    color: #e00073;
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 24px;
+    margin: 1em 0;
+  }
+
+  img.ribbon {
+    margin: 2em 0 1em 0;
+  }
+
+  a {
+    color: #e00073;
+  }
+
+  a:hover {
+    color: #ad0059;
+    text-decoration: none;
+  }
+
+  a.button {
+    display: inline-block;
+    background-color: #e00073;
+    color: #fff;
+    padding: 0.5em 1em;
+  }
+
+  a.button:hover {
+    text-decoration: none;
+    background-color: #ad0059;
+  }
+
+  p.tweet {
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, 0.85);
+    border-radius: 2px;
+    padding: 0.5em 1em;
+    font-size: 16px;
+  }
+
+  a.tweet {
+    margin: 0;
+    font-size: 40px;
+    line-height: 16px;
+    color: #55acee;
+  }
+
+  a.tweet:hover {
+    color: #55acee;
+  }
+
+  aside.tellyourfriends {
+    margin: 2em 0;
+  }
+
+  img.logo {
+    width: 100px;
+    margin-bottom: 1em;
+    margin-top: 3em;
+  }
+
+  footer div.imprint {
+    font-size: 16px;
+  }
+}

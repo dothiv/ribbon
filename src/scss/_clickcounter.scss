@@ -1,0 +1,94 @@
+$topbottom-width: 500px;
+$margin: 15px;
+$icon-width: 53px;
+$icon-aspect: 1.923;
+$icon-height: $icon-width * $icon-aspect;
+$headline-fontsize: 18px;
+$text-fontsize: 15px;
+$color-font: #000;
+$color-bg: #fff;
+$color-overlay: #000000;
+$color-link: #e00073;
+$dropshadow-size: 10px;
+
+// Top banner
+$top-ribbon-margin: 30px;
+$top-height: 48px;
+
+#dothiv-clickcounter-outer {
+  top: 0;
+  left: 0;
+  background-color: black;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
+  filter: alpha(opacity=70);
+  height: 100%;
+  margin: 0;
+  opacity: 0.7;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 2147483645;
+  border: 0;
+  display: block;
+}
+
+#dothiv-clickcounter {
+  box-shadow: 0 0 $dropshadow-size rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  position: absolute;
+  width: $topbottom-width;
+  @media (max-width: $topbottom-width) {
+    width: 100%;
+  }
+  top: -500px;
+  left: 0;
+  z-index: 2147483646;
+  color: $color-font;
+  font-family: Arial, Helvetica, sans-serif;
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .logo {
+    top: 0;
+    left: $margin / 2;
+    background: url("/img/ribbon-dots@2x.png") no-repeat 0 0;
+    position: absolute;
+    display: block;
+    width: $icon-width;
+    height: $icon-height;
+  }
+
+  .header {
+    margin: $margin;
+    position: relative;
+    min-height: $icon-height;
+  }
+
+  .footer {
+    margin: 0 $margin 0 $margin;
+    position: relative;
+  }
+
+  p {
+    font-size: $headline-fontsize;
+    margin-left: $icon-width + $margin;
+  }
+
+  p.info {
+    font-size: $text-fontsize;
+  }
+
+  span.link {
+    text-decoration: underline;
+    color: $color-link;
+    white-space: nowrap;
+  }
+}
+

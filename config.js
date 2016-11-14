@@ -25,7 +25,8 @@ nconf.defaults({
   'dothiv': {
     'title': null,
     'redirect': null,
-    'language': 'en'
+    'language': 'de',
+    'domain': 'click4life.hiv'
   },
   'podio': {
     'client_id': 'ribbon-configurator',

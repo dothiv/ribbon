@@ -2,15 +2,33 @@
 
 import config from './config'
 import pjson from './package.json'
-import {merge} from 'lodash'
+import {merge, template, forIn} from 'lodash'
 const dothiv = config.get('dothiv')
+const strings = require('./strings.json')
 
-module.exports = merge(
+let webConfig = merge(
   dothiv,
-  require('./strings.json')[dothiv.language],
+  strings.en,
+  strings[dothiv.language],
   {
     environment: config.get('environment'),
     version: pjson.version,
-    name: pjson.name
+    name: pjson.name,
+    domain: dothiv.domain
   }
 )
+
+const replace = data => {
+  forIn(data, (v, k) => {
+    if (typeof v === 'string') {
+      data[k] = template(v)(webConfig)
+    } else {
+      data[k] = replace(v)
+    }
+  })
+  return data
+}
+
+webConfig = replace(webConfig)
+
+module.exports = webConfig
