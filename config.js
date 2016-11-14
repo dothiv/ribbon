@@ -11,6 +11,7 @@ nconf
       'dothiv__title',
       'dothiv__redirect',
       'dothiv__language',
+      'dothiv__domain',
       'podio__client_secret',
       'podio__client_id',
       'podio__app_token',

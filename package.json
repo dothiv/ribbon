@@ -62,7 +62,8 @@
             "es2015"
           ],
           "only": [
-            "/src/js/*.js"
+            "/src/js/*.js",
+            "/src/js/module/*.js"
           ]
         }
       ],

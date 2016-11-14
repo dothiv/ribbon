@@ -76,6 +76,10 @@ build/fonts: node_modules/ionicons/dist/fonts/*.*
 	mkdir -p build/fonts
 	cp -u node_modules/ionicons/dist/fonts/*.* build/fonts/
 
+deploy: build ## Deploy to production
+	rsync -crvz --delete --delete-after build/ $(RSYNC)/$(DOTHIV__DOMAIN)
+
+
 # Cleanup
 
 clean:
