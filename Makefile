@@ -27,6 +27,7 @@ build/favicon.ico: src/img/favicon.ico
 
 DOTHIV__TITLE ?= "dotHIV Initiative"
 DOTHIV__REDIRECT ?= "https://click4life.hiv"
+DOTHIV__LANGUAGE ?= "en"
 
 htmlbuild := build/iframe.html
 build/%.html: src/%.html

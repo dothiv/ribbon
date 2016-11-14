@@ -10,6 +10,7 @@ nconf
       'environment',
       'dothiv__title',
       'dothiv__redirect',
+      'dothiv__language',
       'podio__client_secret',
       'podio__client_id',
       'podio__app_token',
@@ -24,12 +25,7 @@ nconf.defaults({
   'dothiv': {
     'title': null,
     'redirect': null,
-    // 'heading': 'Diese Internetseite trägt die digitale Rote Schleife.',
-    'heading': 'This website wears a digital Red Ribbon.',
-    // 'info': 'Sie unterstützt das Ende von AIDS.',
-    'info': 'It fights for the end of AIDS.',
-    // 'more': 'Mehr zu .hiv &raquo;'
-    'more': 'More about .hiv &raquo;'
+    'language': 'en'
   },
   'podio': {
     'client_id': 'ribbon-configurator',
