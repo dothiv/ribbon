@@ -12,6 +12,14 @@ You can find more information about the current state of the dotHIV project on [
 
 The digital red ribbon is offered in two variants, the iFrame and the Microsite.
 
+### Microsite
+
+The Microsite is a single page website that domain owners can choose to display to visitors of their .hiv domain.
+
+Example: http://static.clickcounter.hiv/microsite.html
+
+![iFrame](./doc/microsite.gif)
+
 ### iFrame 
 
 The iFrame wraps the target website and overlays the small message, after a few seconds it forwards the visitor to the target webpage.
@@ -20,10 +28,3 @@ Example: http://static.clickcounter.hiv/iframe.html
 
 ![iFrame](./doc/iframe.gif)
 
-### Microsite
-
-The Microsite is a single page website that domain owners can choose to display to visitors of their .hiv domain.
-
-Example: http://static.clickcounter.hiv/microsite.html
-
-![iFrame](./doc/microsite.gif)
