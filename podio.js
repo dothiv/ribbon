@@ -1,12 +1,11 @@
-'use strict'
-
 /* eslint camelcase: "off" */
-const Podio = require('podio-js/lib/podio-js')
 import config from './config'
-const appId = config.get('podio:app_id')
+import fs from 'fs'
 import Promise from 'bluebird'
 import child_process from 'child_process'
-import fs from 'fs'
+import Podio from 'podio-js/lib/podio-js'
+
+const appId = config.get('podio:app_id')
 Promise.promisifyAll(fs)
 Promise.promisifyAll(child_process)
 

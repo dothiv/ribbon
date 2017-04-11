@@ -1,7 +1,5 @@
-'use strict'
-
-const $ = require('jquery')
 import cc from './module/clickcounter'
+import $ from 'jquery'
 
 $(() => {
   const $clickcounterOuter = $('#dothiv-clickcounter-outer')

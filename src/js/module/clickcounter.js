@@ -1,5 +1,3 @@
-'use strict'
-
 module.exports = $ => {
   const $clickcounter = $('#dothiv-clickcounter')
   const $clickcounterOuter = $('#dothiv-clickcounter-outer')

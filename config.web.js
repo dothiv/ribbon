@@ -1,10 +1,9 @@
-'use strict'
-
 import config from './config'
 import pjson from './package.json'
 import {merge, template, forIn} from 'lodash'
+import strings from './strings.json'
+
 const dothiv = config.get('dothiv')
-const strings = require('./strings.json')
 
 let webConfig = merge(
   dothiv,

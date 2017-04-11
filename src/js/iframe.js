@@ -1,7 +1,5 @@
-'use strict'
-
-const $ = require('jquery')
 import cc from './module/clickcounter'
+import $ from 'jquery'
 
 const close = () => {
   window.location.href = $('#clickcounter-target-iframe').attr('src')
