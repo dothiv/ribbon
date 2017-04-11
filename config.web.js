@@ -30,4 +30,4 @@ const replace = data => {
 
 webConfig = replace(webConfig)
 
-module.exports = webConfig
+process.stdout.write(JSON.stringify(webConfig))

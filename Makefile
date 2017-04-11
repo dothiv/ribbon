@@ -29,13 +29,16 @@ DOTHIV__TITLE ?= "dotHIV Initiative"
 DOTHIV__REDIRECT ?= "https://click4life.hiv"
 DOTHIV__LANGUAGE ?= "en"
 
+build/config.json: config.web.js
+	./node_modules/.bin/babel-node $< > $@
+
 htmlbuild := build/iframe.html build/microsite.html
-build/%.html: src/%.html config.web.js strings.json
+build/%.html: src/%.html build/config.json strings.json
 	@mkdir -p $(dir $@)
 ifeq ($(ENVIRONMENT),development)
-	DOTHIV__TITLE=$(DOTHIV__TITLE) DOTHIV__REDIRECT=$(DOTHIV__REDIRECT) ./node_modules/.bin/babel-node ./node_modules/.bin/rheactor-build-views build ./config.web $< $@
+	DOTHIV__TITLE=$(DOTHIV__TITLE) DOTHIV__REDIRECT=$(DOTHIV__REDIRECT) ./node_modules/.bin/babel-node ./node_modules/.bin/rheactor-build-views build build/config.json $< $@
 else
-	DOTHIV__TITLE=$(DOTHIV__TITLE) DOTHIV__REDIRECT=$(DOTHIV__REDIRECT) ./node_modules/.bin/babel-node ./node_modules/.bin/rheactor-build-views build -m ./config.web $< $@
+	DOTHIV__TITLE=$(DOTHIV__TITLE) DOTHIV__REDIRECT=$(DOTHIV__REDIRECT) ./node_modules/.bin/babel-node ./node_modules/.bin/rheactor-build-views build -m build/config.json $< $@
 endif
 
 # JavaScript
