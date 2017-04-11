@@ -1,6 +1,6 @@
 # the digital red ribbon
 
-[![Build Status](https://travis-ci.org/dothiv/ribbon.svg)](https://travis-ci.com/dothiv/ribbon)
+[![Build Status](https://travis-ci.org/dothiv/ribbon.svg)](https://travis-ci.org/dothiv/ribbon)
 [![monitored by greenkeeper.io](https://img.shields.io/badge/greenkeeper.io-monitored-brightgreen.svg)](http://greenkeeper.io/) 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
