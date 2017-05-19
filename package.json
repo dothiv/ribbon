@@ -45,12 +45,12 @@
     "husky": "^0.13.3",
     "lodash": "^4.17.4",
     "nconf": "^0.8.4",
-    "node-sass": "^4.5.2",
+    "node-sass": "^4.5.3",
     "node-static": "^0.7.9",
     "rheactor-build-views": "^4.0.1",
-    "standard": "^10.0.1",
-    "uglifycss": "^0.0.26",
-    "uglifyjs": "^2.4.10",
+    "standard": "^10.0.2",
+    "uglify-js": "^3.0.8",
+    "uglifycss": "0.0.27",
     "validate-commit-msg": "^2.12.1"
   },
   "browserify": {
