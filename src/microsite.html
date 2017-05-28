@@ -17,9 +17,9 @@
                   click4life.hiv
 
 -->
-<html lang="<%= data['language'] %>">
+<html lang="<%= data.language %>">
 <head>
-  <title><%= data['title'] %> digital Red Ribbon</title>
+  <title><%= data.title %> digital Red Ribbon</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet" type="text/css">
@@ -28,15 +28,15 @@
   <!-- Twitter cards support -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="dotHIV">
-  <meta name="twitter:title" content="<%= data['title'] %> digital Red Ribbon">
+  <meta name="twitter:title" content="<%= data.title %> digital Red Ribbon">
   <meta name="twitter:description" content="I support the global, digital movement to see the end of AIDS. Together we can do it! Let’s build an AIDS free generation.">
   <meta name="twitter:creator" content="dotHIV">
-  <meta name="twitter:image:src" content="<%= data.contentHost %>/img/header-960px.jpg?v=<%= data.version %>-<%= data['buildTime'] %>">
+  <meta name="twitter:image:src" content="<%= data.contentHost %>/img/header-960px.jpg?v=<%= data.version %>-<%= data.buildTime %>">
   <!-- Facebook open graph support -->
-  <meta property="og:title" content="<%= data['title'] %> digital Red Ribbon">
+  <meta property="og:title" content="<%= data.title %> digital Red Ribbon">
   <meta property="og:description" content="I support the global, digital movement to see the end of AIDS. Together we can do it! Let’s build an AIDS free generation.">
-  <meta property="og:site_name" content="<%= data['title'] %> digital Red Ribbon">
-  <meta property="og:image" content="<%= data.contentHost %>/img/header-960px.jpg?v=<%= data.version %>-<%= data['buildTime'] %>">
+  <meta property="og:site_name" content="<%= data.title %> digital Red Ribbon">
+  <meta property="og:image" content="<%= data.contentHost %>/img/header-960px.jpg?v=<%= data.version %>-<%= data.buildTime %>">
   <meta property="og:type" content="website">
   <meta property="fb:app_id" content="486753724803417">
 </head>
@@ -44,7 +44,7 @@
 <main class="container">
   <header class="row">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-      <img src="<%= data.contentHost %>/img/header-960px.jpg?v=<%= data.version %>-<%= data['buildTime'] %>" alt="<%= data['title'] %> digital Red Ribbon" width="960" class="ribbon">
+      <img src="<%= data.contentHost %>/img/header-960px.jpg?v=<%= data.version %>-<%= data.buildTime %>" alt="<%= data.title %> digital Red Ribbon" width="960" class="ribbon">
     </div>
   </header>
   <article class="row">
@@ -80,7 +80,7 @@
     </div>
   </footer>
 </main>
-<%= includes['clickcounter'] %>
+<%= includes.clickcounter %>
 <script defer type="text/javascript" src="<%= data.contentHost %>/js/microsite.min.js?v=<%= data.version %>-<%= data.buildTime %>"></script>
 </body>
 </html>

@@ -17,31 +17,31 @@
                   click4life.hiv
 
 -->
-<html lang="<%= data['language'] %>">
+<html lang="<%= data.language %>">
 <head>
-  <title><%= data['title'] %></title>
+  <title><%= data.title %></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Twitter cards support -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="dotHIV">
-  <meta name="twitter:title" content="<%= data['title'] %> | dotHIV – The digital Red Ribbon">
+  <meta name="twitter:title" content="<%= data.title %> | dotHIV – The digital Red Ribbon">
   <meta name="twitter:description" content="dotHIV brings the domain ending .hiv to the Internet - as the digital Red Ribbon. For the first time in the history of the Internet a Top-Level Domain is designed solely for a social cause: the end of AIDS! Get to know more about our Mission, the Goal and the contribution of dotHIV in the fight against AIDS.">
   <meta name="twitter:creator" content="dotHIV">
-  <meta name="twitter:image:src" content="<%= data.contentHost %>/img/teaser.jpg?v=<%= data.version %>-<%= data['buildTime'] %>">
+  <meta name="twitter:image:src" content="<%= data.contentHost %>/img/teaser.jpg?v=<%= data.version %>-<%= data.buildTime %>">
   <!-- Facebook open graph support -->
-  <meta property="og:title" content="<%= data['title'] %> | dotHIV – The digital Red Ribbon">
+  <meta property="og:title" content="<%= data.title %> | dotHIV – The digital Red Ribbon">
   <meta property="og:description" content="dotHIV brings the domain ending .hiv to the Internet - as the digital Red Ribbon. For the first time in the history of the Internet a Top-Level Domain is designed solely for a social cause: the end of AIDS! Get to know more about our Mission, the Goal and the contribution of dotHIV in the fight against AIDS.">
-  <meta property="og:site_name" content="<%= data['title'] %>">
-  <meta property="og:image" content="<%= data.contentHost %>/img/teaser.jpg?v=<%= data.version %>-<%= data['buildTime'] %>">
+  <meta property="og:site_name" content="<%= data.title %>">
+  <meta property="og:image" content="<%= data.contentHost %>/img/teaser.jpg?v=<%= data.version %>-<%= data.buildTime %>">
   <meta property="og:type" content="website">
   <meta property="fb:app_id" content="486753724803417">
   <link rel="stylesheet" href="<%= data.contentHost %>/css/iframe.min.css?v=<%= data.version %>-<%= data.buildTime %>">
   <link rel="shortcut icon" href="<%= data.contentHost %>/img/favicon.png?v=<%= data.version %>-<%= data.buildTime %>">
 </head>
 <body>
-<iframe src="<%= data['redirect'] %>" id="clickcounter-target-iframe"></iframe>
-<%= includes['clickcounter'] %>
+<iframe src="<%= data.redirect %>" id="clickcounter-target-iframe"></iframe>
+<%= includes.clickcounter %>
 <script defer type="text/javascript" src="<%= data.contentHost %>/js/iframe.min.js?v=<%= data.version %>-<%= data.buildTime %>"></script>
 </body>
 </html>
