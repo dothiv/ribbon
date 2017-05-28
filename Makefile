@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := help
-.PHONY: help deploy
+.PHONY: help deploy site
 
 help: ## (default), display the list of make commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
@@ -30,6 +30,7 @@ DOTHIV__REDIRECT ?= "https://click4life.hiv"
 DOTHIV__LANGUAGE ?= "en"
 
 build/config.json: config.web.js
+	@mkdir -p $(dir $@)
 	./node_modules/.bin/babel-node $< > $@
 
 htmlbuild := build/iframe.html build/microsite.html
@@ -103,3 +104,5 @@ build: $(assetsbuild) $(htmlbuild) $(jsbuild) $(cssbuild) ## Build for productio
 
 sites: guard-PODIO__CLIENT_SECRET guard-PODIO__APP_TOKEN
 	./node_modules/.bin/babel-node podio.js
+
+site: build/config.json build/iframe.html build/microsite.html build/favicon.ico

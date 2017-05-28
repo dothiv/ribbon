@@ -52,21 +52,19 @@ const getConfig = () => new Promise((resolve, reject) => podio
   })
 )
 
-const escapeShellArg = cmd => '\'' + cmd.replace(/'/g, "'\\''") + '\''
-
 getConfig()
   .map(domainConfig => child_process
-      .execAsync('rm -f build/*.html')
+      .execAsync('make clean')
       .then(() => {
         const env = {
-          'DOTHIV__TITLE': escapeShellArg(domainConfig.title),
-          'DOTHIV__LANGUAGE': escapeShellArg(domainConfig.language),
-          'DOTHIV__DOMAIN': escapeShellArg(domainConfig.domain)
+          'DOTHIV__TITLE': domainConfig.title,
+          'DOTHIV__LANGUAGE': domainConfig.language === 'German' ? 'de' : 'en',
+          'DOTHIV__DOMAIN': domainConfig.domain
         }
         if (domainConfig.type === 'iFrame') {
-          env['DOTHIV__REDIRECT'] = escapeShellArg(domainConfig.redirectTo)
+          env['DOTHIV__REDIRECT'] = domainConfig.redirectTo
         }
-        return child_process.execAsync('make build', {env: Object.assign(env, process.env)})
+        return child_process.execAsync('make -B site', {env: Object.assign(process.env, env)})
       })
       .then(() => child_process.execAsync('mkdir -p ./sites/' + domainConfig.domain + '/'))
       .then(() => child_process.execAsync('cp -r build/{*.html,favicon.ico} ./sites/' + domainConfig.domain + '/'))
