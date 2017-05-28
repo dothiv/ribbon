@@ -28,9 +28,15 @@ Example: http://static.clickcounter.hiv/iframe.html
 
 ![iFrame](./doc/iframe.gif)
 
-## Deployment
+## Live
 
-Run the deploy target:
+The ribbons are statically hosted, currently on `andromeda.hostedinspace.de`.
+
+The configuration for each .hiv domain is managed in the Podio app [Digital Red Ribbon Configuration](https://podio.com/dothivorg/digital-red-ribbon/apps/digital-red-ribbon-configuration).
+
+### Deployment
+
+To update the ribbons, run the *deploy* target:
 
     PODIO__CLIENT_SECRET=… \
     PODIO__APP_TOKEN=… \
