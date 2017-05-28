@@ -6,4 +6,4 @@ cache:
 node_js: 'node'
 script:
   - npm run lint
-  - make build
+  - DOTHIV__DOMAIN=click4life.hiv make build
