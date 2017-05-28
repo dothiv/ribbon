@@ -13,7 +13,8 @@ nconf
       'podio__client_secret',
       'podio__client_id',
       'podio__app_token',
-      'podio__app_id'
+      'podio__app_id',
+      'content_host'
     ],
     lowerCase: true,
     separator: '__'
@@ -21,6 +22,7 @@ nconf
 
 nconf.defaults({
   'environment': 'development',
+  'content_host': '',
   'dothiv': {
     'title': null,
     'redirect': null,

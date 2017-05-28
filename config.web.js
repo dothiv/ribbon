@@ -11,6 +11,7 @@ let webConfig = merge(
   strings[dothiv.language],
   {
     environment: config.get('environment'),
+    contentHost: config.get('content_host'),
     version: pjson.version,
     name: pjson.name,
     domain: dothiv.domain

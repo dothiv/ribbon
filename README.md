@@ -28,3 +28,10 @@ Example: http://static.clickcounter.hiv/iframe.html
 
 ![iFrame](./doc/iframe.gif)
 
+## Deployment
+
+Run the deploy target:
+
+    PODIO__CLIENT_SECRET=… \
+    PODIO__APP_TOKEN=… \
+    make deploy

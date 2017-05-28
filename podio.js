@@ -66,7 +66,7 @@ getConfig()
         if (domainConfig.type === 'iFrame') {
           env['DOTHIV__REDIRECT'] = escapeShellArg(domainConfig.redirectTo)
         }
-        return child_process.execAsync('make build', {env})
+        return child_process.execAsync('make build', {env: Object.assign(env, process.env)})
       })
       .then(() => child_process.execAsync('mkdir -p ./sites/' + domainConfig.domain + '/'))
       .then(() => child_process.execAsync('cp -r build/{*.html,favicon.ico} ./sites/' + domainConfig.domain + '/'))

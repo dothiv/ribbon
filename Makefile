@@ -33,7 +33,7 @@ build/config.json: config.web.js
 	./node_modules/.bin/babel-node $< > $@
 
 htmlbuild := build/iframe.html build/microsite.html
-build/%.html: src/%.html build/config.json strings.json
+build/%.html: src/%.html build/config.json strings.json guard-DOTHIV__DOMAIN guard-CONTENT_HOST
 	@mkdir -p $(dir $@)
 ifeq ($(ENVIRONMENT),development)
 	DOTHIV__TITLE=$(DOTHIV__TITLE) DOTHIV__REDIRECT=$(DOTHIV__REDIRECT) ./node_modules/.bin/babel-node ./node_modules/.bin/rheactor-build-views build build/config.json $< $@
@@ -79,9 +79,13 @@ build/fonts: node_modules/ionicons/dist/fonts/*.*
 	mkdir -p build/fonts
 	cp -u node_modules/ionicons/dist/fonts/*.* build/fonts/
 
-deploy: build ## Deploy to production
-	rsync -crvz --delete --delete-after build/ $(RSYNC)/$(DOTHIV__DOMAIN)
+RSYNC ?= "dothiv@andromeda.hostedinspace.de:domains"
 
+deploy: guard-RSYNC ## Deploy to production
+	CONTENT_HOST=https://static.clickcounter.hiv DOTHIV__DOMAIN=static.clickcounter.hiv make -B build
+	rsync -crvz --delete --delete-after build/ $(RSYNC)/$(DOTHIV__DOMAIN)
+	CONTENT_HOST=https://static.clickcounter.hiv make sites
+	rsync -crvz sites/ $(RSYNC)/
 
 # Cleanup
 
@@ -96,3 +100,6 @@ development: ## Build for development environment
 	ENVIRONMENT=development make build
 
 build: $(assetsbuild) $(htmlbuild) $(jsbuild) $(cssbuild) ## Build for production environment
+
+sites: guard-PODIO__CLIENT_SECRET guard-PODIO__APP_TOKEN
+	./node_modules/.bin/babel-node podio.js
