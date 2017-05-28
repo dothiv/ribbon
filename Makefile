@@ -33,7 +33,7 @@ build/config.json: config.web.js
 	./node_modules/.bin/babel-node $< > $@
 
 htmlbuild := build/iframe.html build/microsite.html
-build/%.html: src/%.html build/config.json strings.json guard-DOTHIV__DOMAIN guard-CONTENT_HOST
+build/%.html: src/%.html build/config.json strings.json guard-DOTHIV__DOMAIN
 	@mkdir -p $(dir $@)
 ifeq ($(ENVIRONMENT),development)
 	DOTHIV__TITLE=$(DOTHIV__TITLE) DOTHIV__REDIRECT=$(DOTHIV__REDIRECT) ./node_modules/.bin/babel-node ./node_modules/.bin/rheactor-build-views build build/config.json $< $@
@@ -97,7 +97,7 @@ clean:
 .SECONDARY: $(jsbrowserified) $(csssassed)
 
 development: ## Build for development environment
-	ENVIRONMENT=development make build
+	ENVIRONMENT=development DOTHIV__DOMAIN=click4life.hiv make build
 
 build: $(assetsbuild) $(htmlbuild) $(jsbuild) $(cssbuild) ## Build for production environment
 
