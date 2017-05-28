@@ -82,8 +82,8 @@ build/fonts: node_modules/ionicons/dist/fonts/*.*
 RSYNC ?= "dothiv@andromeda.hostedinspace.de:domains"
 
 deploy: guard-RSYNC ## Deploy to production
-	CONTENT_HOST=https://static.clickcounter.hiv DOTHIV__DOMAIN=static.clickcounter.hiv make -B build
-	rsync -crvz --delete --delete-after build/ $(RSYNC)/$(DOTHIV__DOMAIN)
+	CONTENT_HOST=https://static.clickcounter.hiv DOTHIV__DOMAIN=click4life.hiv DOTHIV__REDIRECT=https://dothiv.jimdo.com/ make -B build
+	rsync -crvz --delete --delete-after build/ $(RSYNC)/static.clickcounter.hiv
 	CONTENT_HOST=https://static.clickcounter.hiv make sites
 	rsync -crvz sites/ $(RSYNC)/
 
