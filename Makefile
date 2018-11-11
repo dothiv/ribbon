@@ -92,6 +92,7 @@ clean:
 development: ## Build for development environment
 	ENVIRONMENT=development DOTHIV__DOMAIN=click4life.hiv make build
 
-build: $(assetsbuild) $(htmlbuild) $(jsbuild) $(cssbuild) ## Build for production environment
+build: $(assetsbuild) $(htmlbuild) $(jsbuild) $(cssbuild) guard-DOTHIV__DOMAIN ## Build for production environment
+	echo $(DOTHIV__DOMAIN) > build/CNAME
 
 site: build/config.json build/iframe.html build/microsite.html build/favicon.ico

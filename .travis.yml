@@ -6,8 +6,7 @@ cache:
 node_js: 'node'
 script:
   - npm run lint
-  - CONTENT_HOST=https://static.clickcounter.hiv DOTHIV__DOMAIN=click4life.hiv DOTHIV__REDIRECT=https://dothiv.jimdo.com/ make -B build
-  - echo static.clickcounter.hiv > build/CNAME
+  - CONTENT_HOST=https://static.clickcounter.hiv DOTHIV__DOMAIN=static.clickcounter.hiv DOTHIV__REDIRECT=https://dothiv.jimdo.com/ make -B build
   - cd build
   - echo "machine github.com login travis-ci password ${GH_TOKEN}" > ~/.netrc
   - git config --global user.email "travis@travis-ci.org"
