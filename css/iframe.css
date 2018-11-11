@@ -1,0 +1,78 @@
+#dothiv-clickcounter-outer {
+  top: 0;
+  left: 0;
+  background-color: black;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=70)';
+  filter: alpha(opacity=70);
+  height: 100%;
+  margin: 0;
+  opacity: 0.7;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 2147483645;
+  border: 0;
+  display: block; }
+
+#dothiv-clickcounter {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  position: absolute;
+  width: 500px;
+  top: -500px;
+  left: 0;
+  z-index: 2147483646;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif; }
+  @media (max-width: 500px) {
+    #dothiv-clickcounter {
+      width: 100%; } }
+  #dothiv-clickcounter a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  #dothiv-clickcounter .logo {
+    top: 0;
+    left: 7.5px;
+    background: url("/img/ribbon-dots@2x.png") no-repeat 0 0;
+    position: absolute;
+    display: block;
+    width: 53px;
+    height: 101.919px; }
+  #dothiv-clickcounter .header {
+    margin: 15px;
+    position: relative;
+    min-height: 101.919px; }
+  #dothiv-clickcounter .footer {
+    margin: 0 15px 0 15px;
+    position: relative; }
+  #dothiv-clickcounter p {
+    font-size: 18px;
+    margin-left: 68px; }
+  #dothiv-clickcounter p.info {
+    font-size: 15px; }
+  #dothiv-clickcounter span.link {
+    text-decoration: underline;
+    color: #e00073;
+    white-space: nowrap; }
+
+#clickcounter-target-iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+html {
+  height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: transparent; }
