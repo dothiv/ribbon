@@ -30,7 +30,7 @@ Example: http://static.clickcounter.hiv/iframe.html
 
 ## Live
 
-The ribbons are statically hosted, currently on `andromeda.hostedinspace.de`.
+The ribbons are statically hosted using GitHub pages.
 
 The configuration for each .hiv domain is managed in the Podio app [Digital Red Ribbon Configuration](https://podio.com/dothivorg/digital-red-ribbon/apps/digital-red-ribbon-configuration).
 

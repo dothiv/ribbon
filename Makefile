@@ -80,14 +80,6 @@ build/fonts: node_modules/ionicons/dist/fonts/*.*
 	mkdir -p build/fonts
 	cp -u node_modules/ionicons/dist/fonts/*.* build/fonts/
 
-RSYNC ?= "dothiv@andromeda.hostedinspace.de:domains"
-
-deploy: guard-RSYNC ## Deploy to production
-	CONTENT_HOST=https://static.clickcounter.hiv DOTHIV__DOMAIN=click4life.hiv DOTHIV__REDIRECT=https://dothiv.jimdo.com/ make -B build
-	rsync -crvz --delete --delete-after build/ $(RSYNC)/static.clickcounter.hiv
-	CONTENT_HOST=https://static.clickcounter.hiv make sites
-	rsync -crvz sites/ $(RSYNC)/
-
 # Cleanup
 
 clean:
@@ -101,8 +93,5 @@ development: ## Build for development environment
 	ENVIRONMENT=development DOTHIV__DOMAIN=click4life.hiv make build
 
 build: $(assetsbuild) $(htmlbuild) $(jsbuild) $(cssbuild) ## Build for production environment
-
-sites: guard-PODIO__CLIENT_SECRET guard-PODIO__APP_TOKEN
-	./node_modules/.bin/babel-node podio.js
 
 site: build/config.json build/iframe.html build/microsite.html build/favicon.ico
