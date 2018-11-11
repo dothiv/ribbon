@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard",
+    "prettify": "standard --fix",
     "dev-server": "static ./build"
   },
   "repository": {
