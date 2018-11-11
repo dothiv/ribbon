@@ -1,4 +1,4 @@
-import nconf from 'nconf'
+const nconf = require('nconf')
 
 nconf.use('memory')
 
@@ -26,7 +26,7 @@ nconf.defaults({
   'dothiv': {
     'title': null,
     'redirect': null,
-    'language': 'de',
+    'language': 'en',
     'domain': 'click4life.hiv'
   },
   'podio': {
@@ -37,4 +37,4 @@ nconf.defaults({
   }
 })
 
-export default nconf
+module.exports = nconf

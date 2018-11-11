@@ -1,9 +1,9 @@
 /* eslint camelcase: "off" */
-import config from './config'
-import fs from 'fs'
-import Promise from 'bluebird'
-import child_process from 'child_process'
-import Podio from 'podio-js/lib/podio-js'
+const config = require('./config')
+const fs = require('fs')
+const Promise = require('bluebird')
+const child_process = require('child_process')
+const Podio = require('podio-js/lib/podio-js')
 
 const appId = config.get('podio:app_id')
 Promise.promisifyAll(fs)
@@ -57,12 +57,16 @@ getConfig()
     .execAsync('make clean')
     .then(() => {
       const env = {
+        'CONTENT_HOST': 'https://static.clickcounter.hiv',
         'DOTHIV__TITLE': domainConfig.title,
         'DOTHIV__LANGUAGE': domainConfig.language === 'German' ? 'de' : 'en',
         'DOTHIV__DOMAIN': domainConfig.domain
       }
       if (domainConfig.type === 'iFrame') {
         env['DOTHIV__REDIRECT'] = domainConfig.redirectTo
+        if (!/^https/.test(domainConfig.redirectTo.toLowerCase())) {
+          env['CONTENT_HOST'] = 'http://static.clickcounter.hiv'
+        }
       }
       return child_process.execAsync('make -B site', { env: Object.assign(process.env, env) })
     })
@@ -81,6 +85,7 @@ getConfig()
         )
       }
     })
+    .then(() => fs.writeFileAsync('./sites/' + domainConfig.domain + '/CNAME', domainConfig.domain, 'utf-8'))
     .then(() => {
       console.log('-', domainConfig.domain)
     }),

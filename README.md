@@ -35,8 +35,8 @@ The configuration for each .hiv domain is managed in the Podio app [Digital Red 
 
 ### Deployment
 
-To update the ribbons, run the *deploy* target:
+To build the HIV sites, run the `podio.js` script:
 
     PODIO__CLIENT_SECRET=… \
     PODIO__APP_TOKEN=… \
-    make deploy
+    node podio.js

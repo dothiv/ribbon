@@ -1,7 +1,7 @@
-import config from './config'
-import pjson from './package.json'
-import { merge, template, forIn } from 'lodash'
-import strings from './strings.json'
+const config = require('./config')
+const pjson = require('./package.json')
+const { merge, template, forIn } = require('lodash')
+const strings = require('./strings.json')
 
 const dothiv = config.get('dothiv')
 
